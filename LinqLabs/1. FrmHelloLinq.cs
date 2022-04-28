@@ -133,19 +133,20 @@ namespace Starter
 
         private void button8_Click(object sender, EventArgs e)
         {
-            this.dataGridView1.DataSource = this.nwDataSet1.Products;
+            //this.dataGridView1.DataSource = this.nwDataSet1.Products;
             IEnumerable<global::LinqLabs.nwDataSet.ProductsRow> q = from p in this.nwDataSet1.Products
                                                                     where !p.IsUnitPriceNull() &&( p.UnitPrice > 30 && p.UnitPrice < 90 && p.ProductName.StartsWith("M"))
                                                                     select p;
                                                                   //!p.IsUnitPriceNull() 當p不是空值
             this.dataGridView1.DataSource = q.ToList(); 
         }
-
+        
         private void button9_Click(object sender, EventArgs e)
         {
            // this.dataGridView1.DataSource = this.nwDataSet1.Orders;
             var q = from o in this.nwDataSet1.Orders
                     where o.OrderDate.Year == 1997
+                    orderby o.OrderDate descending
                     select o;
             this.dataGridView1.DataSource = q.ToList();
         }
