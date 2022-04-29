@@ -150,5 +150,10 @@ namespace Starter
                     select o;
             this.dataGridView1.DataSource = q.ToList();
         }
+
+        private void button49_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

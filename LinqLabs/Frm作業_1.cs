@@ -58,14 +58,13 @@ namespace MyHomeWork
             take_now = int.Parse(textBox1.Text);
             this.dataGridView1.DataSource = this.nwDataSet1.Products.Skip(skip).Take(take_now).ToList();
             skip = skip + take_now;
-            take_old = take_now;
+           // take_old = take_now;
         }
         private void button12_Click(object sender, EventArgs e)//上一頁
         {
-            
-            skip -= take_now;
-            take_old = take_now;
             take_now = int.Parse(textBox1.Text);
+            skip -= take_now;
+            //take_old = take_now;
             this.dataGridView1.DataSource = this.nwDataSet1.Products.Skip(skip).Take(take_now).ToList();
 
         }
@@ -78,6 +77,27 @@ namespace MyHomeWork
 
             this.dataGridView1.DataSource = files;
 
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"c:\windows");
+
+            System.IO.FileInfo[] files = dir.GetFiles();
+
+            var q = from f in files where f.Length > 5000 select f;
+
+            this.dataGridView1.DataSource = q.ToList();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            System.IO.DirectoryInfo dir = new System.IO.DirectoryInfo(@"c:\windows");
+
+            System.IO.FileInfo[] files = dir.GetFiles();
+
+            var q = from f in files where f.CreationTime.Year == 2018 select f;
+
+            this.dataGridView1.DataSource = q.ToList();
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -136,9 +156,6 @@ namespace MyHomeWork
 
 
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
