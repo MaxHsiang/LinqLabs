@@ -78,6 +78,11 @@
     <Compile Include="5. FrmLinq_To_Entity.Designer.cs">
       <DependentUpon>5. FrmLinq_To_Entity.cs</DependentUpon>
     </Compile>
+    <Compile Include="AWDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AWDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Frm作業_1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +133,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="AWDataSet.xsc">
+      <DependentUpon>AWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AWDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AWDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="AWDataSet.xss">
+      <DependentUpon>AWDataSet.xsd</DependentUpon>
+    </None>
     <None Include="nwDataSet.xsc">
       <DependentUpon>nwDataSet.xsd</DependentUpon>
     </None>

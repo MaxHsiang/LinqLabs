@@ -16,5 +16,11 @@ namespace MyHomeWork
         {
             InitializeComponent();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            this.productPhotoTableAdapter1.Fill(this.awDataSet1.ProductPhoto);
+            this.dataGridView1.DataSource = this.awDataSet1.ProductPhoto;
+        }
     }
 }
