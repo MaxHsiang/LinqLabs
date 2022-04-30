@@ -186,11 +186,12 @@ namespace MyHomeWork
             // 
             this.comboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(519, 171);
+            this.comboBox3.Location = new System.Drawing.Point(519, 172);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(176, 23);
             this.comboBox3.TabIndex = 135;
+            this.comboBox3.Text = "請選擇年度";
             // 
             // splitContainer1
             // 
@@ -250,6 +251,7 @@ namespace MyHomeWork
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(176, 23);
             this.comboBox2.TabIndex = 131;
+            this.comboBox2.Text = "請選擇季度";
             // 
             // dateTimePicker2
             // 
@@ -269,6 +271,7 @@ namespace MyHomeWork
             this.button3.TabIndex = 81;
             this.button3.Text = "     區間腳踏車 ";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label7
             // 
@@ -290,6 +293,7 @@ namespace MyHomeWork
             this.button5.TabIndex = 82;
             this.button5.Text = "     某年腳踏車 ";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // dateTimePicker1
             // 
@@ -310,6 +314,7 @@ namespace MyHomeWork
             this.button10.TabIndex = 83;
             this.button10.Text = "     某季腳踏車  ? 有幾筆 ?";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label3
             // 
@@ -344,6 +349,10 @@ namespace MyHomeWork
             this.label6.Size = new System.Drawing.Size(216, 15);
             this.label6.TabIndex = 105;
             this.label6.Text = "LINQ to AdventureWorks DataSet";
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.CurrentChanged += new System.EventHandler(this.bindingSource1_CurrentChanged);
             // 
             // awDataSet1
             // 
