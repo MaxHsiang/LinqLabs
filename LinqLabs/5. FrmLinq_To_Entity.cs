@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinqLabs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,14 @@ namespace Starter
             InitializeComponent();
         }
 
-      
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NorthwindEntities dbConect = new NorthwindEntities();
+            var q = from n in dbConect.Products
+                    where n.UnitPrice>30
+                    select n;
+
+            this.dataGridView1.DataSource = q.ToList();
+        }
     }
 }
