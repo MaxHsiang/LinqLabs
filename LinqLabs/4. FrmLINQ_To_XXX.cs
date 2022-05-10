@@ -105,6 +105,7 @@ namespace Starter
                     node.Nodes.Add(items.ToString());
                 }
 
+
             }
 
             //=======================
@@ -140,7 +141,7 @@ namespace Starter
                     orderby g.Count() descending
                     select new
                     {
-                        g.Key,Mycount = g.Count()
+                        g.Key
                     };
             this.dataGridView2.DataSource = q.ToList();
             

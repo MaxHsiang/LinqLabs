@@ -85,7 +85,15 @@
     <Compile Include="5. FrmLinq_To_Entity.Designer.cs">
       <DependentUpon>5. FrmLinq_To_Entity.cs</DependentUpon>
     </Compile>
+    <Compile Include="AWDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AWDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Category.cs">
+      <DependentUpon>NWModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
       <DependentUpon>NWModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Frm作業_1.cs">
@@ -94,11 +102,23 @@
     <Compile Include="Frm作業_1.designer.cs">
       <DependentUpon>Frm作業_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm作業_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm作業_2.designer.cs">
+      <DependentUpon>Frm作業_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm作業_3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm作業_3.designer.cs">
       <DependentUpon>Frm作業_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm考試.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm考試.designer.cs">
+      <DependentUpon>Frm考試.cs</DependentUpon>
     </Compile>
     <Compile Include="nwDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -120,11 +140,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NWModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>NWModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Detail.cs">
+      <DependentUpon>NWModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>NWModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales_by_Year_Result.cs">
+      <DependentUpon>NWModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="1. FrmHelloLinq.resx">
       <DependentUpon>1. FrmHelloLinq.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,8 +172,14 @@
     <EmbeddedResource Include="Frm作業_1.resx">
       <DependentUpon>Frm作業_1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm作業_2.resx">
+      <DependentUpon>Frm作業_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm作業_3.resx">
       <DependentUpon>Frm作業_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm考試.resx">
+      <DependentUpon>Frm考試.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -156,6 +191,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="AWDataSet.xsc">
+      <DependentUpon>AWDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AWDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AWDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AWDataSet.xss">
+      <DependentUpon>AWDataSet.xsd</DependentUpon>
+    </None>
     <None Include="nwDataSet.xsc">
       <DependentUpon>nwDataSet.xsd</DependentUpon>
     </None>
